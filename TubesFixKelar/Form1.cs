@@ -309,7 +309,7 @@ namespace TubesFixKelar
                 String name = str.Substring(f, i - 1 - f);
                 Node node = nodes.ContainsKey(name) ? (Node) nodes[name] : new Node(name);
                 f = i;
-                while (str[i] != '\n')
+                while ((i < length) && (str[i] != '\n'))
                     i++;
                 nodes[name] = node;
                 String oname = str.Substring(f, i - 1 - f);
